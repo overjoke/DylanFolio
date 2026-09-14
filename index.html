@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dylane Hengla — Ingénieur logiciel</title>
+    <meta
+      name="description"
+      content="Portfolio de Dylane Hengla, ingénieur logiciel et développeur d'applications web basé à Douala. Angular, React, Laravel, API et performance web."
+    />
+    <meta name="author" content="Dylane Hengla" />
+    <meta property="og:title" content="Dylane Hengla — Ingénieur logiciel" />
+    <meta property="og:description" content="Applications web, API et performance. Du cahier des charges à la mise en production." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#07070c" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f6fb" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Applique le thème avant le premier rendu pour éviter le flash -->
+    <script>
+      ;(function () {
+        try {
+          var t = localStorage.getItem('dh-theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+          if (t === 'dark') document.documentElement.classList.add('dark')
+          var l = localStorage.getItem('dh-lang')
+          if (!l) l = (navigator.language || 'fr').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en'
+          document.documentElement.lang = l
+        } catch (e) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <!-- Formulaire statique pour que Netlify Forms détecte le formulaire de contact -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <div id="root"></div>
+    <noscript>Ce portfolio nécessite JavaScript. Contact : dylanehengla@gmail.com</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
