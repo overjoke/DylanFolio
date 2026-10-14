@@ -33,7 +33,7 @@ export const projects: Project[] = [
     id: 'mirai',
     mark: 'MP',
     name: 'Mirai Prospection',
-    stack: ['Angular', 'TypeScript', 'Supabase', 'PostgreSQL'],
+    stack: ['Angular', 'Python', 'Supabase', 'PostgreSQL'],
     live: 'https://mirai-prospection.pages.dev',
     hue: 158,
   },
