@@ -162,6 +162,10 @@ const fr = {
     code: 'Code',
     private: 'Projet privé',
     items: {
+      mirai: {
+        type: 'Outil métier / side project',
+        body: "Outil personnel de prospection B2B : recherche d'établissements par secteur et par ville, fiches de suivi, relances datées et journal des échanges. Accès sur invitation.",
+      },
       exms: {
         type: 'Plateforme de conformité',
         body: "Identification, analyse, mise en œuvre, suivi et évaluation des exigences normatives et contractuelles.",
@@ -506,6 +510,10 @@ const en: Dict = {
     code: 'Code',
     private: 'Private project',
     items: {
+      mirai: {
+        type: 'Business tool / side project',
+        body: 'A personal B2B prospecting tool: finding businesses by sector and city, tracking sheets, dated follow-ups and a log of every exchange. Access by invitation.',
+      },
       exms: {
         type: 'Compliance platform',
         body: 'Identifying, analyzing, implementing, tracking and evaluating regulatory and contractual requirements.',

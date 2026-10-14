@@ -14,7 +14,7 @@ export const profile = {
   coords: '4.0511° N · 9.7679° E',
 }
 
-export type ProjectId = 'exms' | 'maneldocu' | 'beaute' | 'cvforger' | 'facturepro' | 'vintage'
+export type ProjectId = 'mirai' | 'exms' | 'maneldocu' | 'beaute' | 'cvforger' | 'facturepro' | 'vintage'
 
 export interface Project {
   id: ProjectId
@@ -29,6 +29,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'mirai',
+    mark: 'MP',
+    name: 'Mirai Prospection',
+    stack: ['Angular', 'TypeScript', 'Supabase', 'PostgreSQL'],
+    live: 'https://mirai-prospection.pages.dev',
+    hue: 158,
+  },
   { id: 'exms', mark: 'XM', name: 'e-XMS', stack: ['Angular', 'Laravel', 'MySQL'], hue: 250 },
   {
     id: 'vintage',
@@ -76,6 +84,7 @@ export const clientSites: { name: string; url: string; category: SiteCategory; y
   { name: 'Manel Recrutement', url: 'https://manelrecrutement.ca/', category: 'business', year: 2023 },
   { name: 'Impact Vert', url: 'https://impactvert.ca/', category: 'nonprofit', year: 2023 },
   { name: 'Momha Marie Gabriella', url: 'https://overjoke.github.io/momha-gabriella-portfolio/', category: 'portfolio', year: 2024 },
+  { name: 'Lave-Auto Brillance Express', url: 'https://laveautobrillanceexpress.ca/', category: 'business', year: 2026 },
 ]
 
 export type ExperienceId = 'cba' | 'vintage' | 'manel' | 'imv'
