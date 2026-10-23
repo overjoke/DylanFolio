@@ -26,6 +26,8 @@ export interface Project {
   mark: string
   /** Teinte (degrés) de la couverture générative */
   hue: number
+  /** Mockup affiché en couverture (dans public/projects, sans l'extension ni la taille) */
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -36,8 +38,16 @@ export const projects: Project[] = [
     stack: ['Angular', 'Python', 'Supabase', 'PostgreSQL'],
     live: 'https://mirai-prospection.pages.dev',
     hue: 158,
+    image: '/projects/mirai',
   },
-  { id: 'exms', mark: 'XM', name: 'e-XMS', stack: ['Angular', 'Laravel', 'MySQL'], hue: 250 },
+  {
+    id: 'exms',
+    mark: 'XM',
+    name: 'e-XMS',
+    stack: ['Angular', 'Laravel', 'MySQL'],
+    hue: 250,
+    image: '/projects/exms',
+  },
   {
     id: 'vintage',
     mark: 'VA',
@@ -45,6 +55,7 @@ export const projects: Project[] = [
     stack: ['React', 'Node.js', 'PostgreSQL'],
     live: 'https://www.vintageacademie.com/',
     hue: 280,
+    image: '/projects/vintage',
   },
   {
     id: 'facturepro',
@@ -54,6 +65,7 @@ export const projects: Project[] = [
     live: 'https://myinvoice-maker.netlify.app/',
     code: 'https://github.com/overjoke/Invoice',
     hue: 200,
+    image: '/projects/facturepro',
   },
   {
     id: 'cvforger',
@@ -63,6 +75,7 @@ export const projects: Project[] = [
     live: 'https://fnecvforger.netlify.app/',
     code: 'https://github.com/overjoke/forge-cv',
     hue: 305,
+    image: '/projects/cvforger',
   },
   { id: 'maneldocu', mark: 'MD', name: 'Manel Docu', stack: ['Laravel', 'MySQL'], hue: 230 },
   {
@@ -73,6 +86,7 @@ export const projects: Project[] = [
     live: 'https://joker-style.netlify.app/',
     code: 'https://github.com/overjoke/coiffure-salon',
     hue: 330,
+    image: '/projects/beaute',
   },
 ]
 

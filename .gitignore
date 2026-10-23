@@ -3,3 +3,5 @@ dist
 .DS_Store
 *.log
 .netlify
+# Vidéos sources (non compressées)
+kula-videos/

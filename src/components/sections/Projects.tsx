@@ -6,25 +6,41 @@ import { SectionHeading } from '../ui/SectionHeading'
 import { TiltCard } from '../ui/TiltCard'
 import { GithubIcon } from '../ui/Icons'
 
-/** Couverture générative unique par projet (pas de capture d'écran nécessaire) */
+/** Couverture : mockup du projet si disponible, sinon couverture générative */
 function Cover({ project }: { project: Project }) {
   const h = project.hue
   return (
-    <div className="relative h-40 overflow-hidden border-b border-line" aria-hidden="true">
-      <div
-        className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
-        style={{
-          background: `radial-gradient(circle at 20% 20%, hsl(${h} 90% 65% / 0.45), transparent 50%),
-            radial-gradient(circle at 85% 70%, hsl(${(h + 60) % 360} 90% 60% / 0.35), transparent 55%),
-            linear-gradient(135deg, hsl(${h} 40% 50% / 0.08), transparent)`,
-        }}
-      />
-      <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,#000,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,#000,transparent)]" />
-      <span
-        className="absolute -bottom-6 left-5 font-display text-8xl font-bold tracking-[-0.06em] text-ink/10 transition-transform duration-700 ease-out group-hover:-translate-y-2"
-      >
-        {project.mark}
-      </span>
+    <div className="relative aspect-[16/10] overflow-hidden border-b border-line" aria-hidden="true">
+      {project.image ? (
+        <img
+          src={`${project.image}-1200.webp`}
+          srcSet={`${project.image}-640.webp 640w, ${project.image}-1200.webp 1200w`}
+          sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+          width={1200}
+          height={750}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+      ) : (
+        <>
+          <div
+            className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
+            style={{
+              background: `radial-gradient(circle at 20% 20%, hsl(${h} 90% 65% / 0.45), transparent 50%),
+                radial-gradient(circle at 85% 70%, hsl(${(h + 60) % 360} 90% 60% / 0.35), transparent 55%),
+                linear-gradient(135deg, hsl(${h} 40% 50% / 0.08), transparent)`,
+            }}
+          />
+          <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,#000,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,#000,transparent)]" />
+          <span
+            className="absolute -bottom-6 left-5 font-display text-8xl font-bold tracking-[-0.06em] text-ink/10 transition-transform duration-700 ease-out group-hover:-translate-y-2"
+          >
+            {project.mark}
+          </span>
+        </>
+      )}
       <div className="absolute top-4 right-4 flex gap-1">
         {project.stack.slice(0, 3).map((s) => (
           <span key={s} className="rounded-full bg-bg/70 px-2 py-0.5 font-mono text-[10px] text-muted backdrop-blur">

@@ -104,6 +104,7 @@ const fr = {
     sectionTitle: "Zoom sur un projet que j'ai piloté.",
     title: 'Kula',
     tagline: 'Piloter un restaurant, de la prise de commande au bilan de fin de journée.',
+    video: { title: 'Kula en une minute', label: 'Vidéo de présentation de Kula' },
     meta: {
       role: 'Rôle',
       roleValue: "Lead développeur au sein d'une petite équipe",
@@ -452,6 +453,7 @@ const en: Dict = {
     sectionTitle: 'A closer look at a project I led.',
     title: 'Kula',
     tagline: 'Running a restaurant, from taking the order to the end-of-day report.',
+    video: { title: 'Kula in one minute', label: 'Kula presentation video' },
     meta: {
       role: 'Role',
       roleValue: 'Lead developer in a small team',

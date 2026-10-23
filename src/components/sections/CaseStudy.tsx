@@ -228,6 +228,24 @@ export function CaseStudy() {
               </dl>
             </div>
 
+            {/* Vidéo de présentation : version FR ou EN selon la langue du site */}
+            <div className="relative border-b border-line p-5 sm:p-8">
+              <h4 className="mb-4 font-mono text-xs tracking-widest text-accent uppercase">{k.video.title}</h4>
+              <div className="overflow-hidden rounded-2xl border border-line-strong bg-black shadow-[var(--shadow)]">
+                <video
+                  key={lang}
+                  className="block aspect-video w-full"
+                  controls
+                  playsInline
+                  preload="none"
+                  poster={`/videos/kula-${lang}-poster.jpg`}
+                  aria-label={k.video.label}
+                >
+                  <source src={`/videos/kula-${lang}.mp4`} type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
             <div className="relative grid lg:grid-cols-[1fr_1.35fr]">
               {/* Récit */}
               <div className="space-y-8 border-b border-line p-7 sm:p-10 lg:border-r lg:border-b-0">
