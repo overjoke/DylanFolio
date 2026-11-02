@@ -1,6 +1,6 @@
 // Données indépendantes de la langue. Les textes traduits sont dans src/i18n/translations.ts
 
-export const profile = {
+export const profile = { 
   name: 'Dylane Hengla',
   fullName: 'Hengla Bamal Joseph Dylane',
   initials: 'DH',
