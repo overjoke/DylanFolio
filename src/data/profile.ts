@@ -99,6 +99,7 @@ export const clientSites: { name: string; url: string; category: SiteCategory; y
   { name: 'Impact Vert', url: 'https://impactvert.ca/', category: 'nonprofit', year: 2023 },
   { name: 'Momha Marie Gabriella', url: 'https://overjoke.github.io/momha-gabriella-portfolio/', category: 'portfolio', year: 2024 },
   { name: 'Lave-Auto Brillance Express', url: 'https://laveautobrillanceexpress.ca/', category: 'business', year: 2026 },
+  { name: 'Boutique Canova', url: 'https://boutiquecanova.ca/', category: 'ecommerce', year: 2026 },
 ]
 
 export type ExperienceId = 'cba' | 'vintage' | 'manel' | 'imv'
